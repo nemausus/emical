@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">EMI Calc</string>
+    <string name="asset_price">Asset Price</string>
+    <string name="insurance_charge">Insurance Charge</string>
+    <string name="registration_charge">Registration Charge</string>
+    <string name="file_charge">File Charge</string>
+    <string name="other_charges">Other Charges</string>
+    <string name="down_payment">Down Payment</string>
+    <string name="interest_rate">Interest Rate</string>
+    <string name="loan_tenure">Loan Tenure</string>
+    <string name="action_settings">Settings</string>
+    <string name="calculate">Calculate</string>
+    <string name="result">Result</string>
+    <string name="base_loan">Base Loan</string>
+    <string name="service_charge">Service Charge(1%)</string>
+    <string name="given_loan">Given Loan</string>
+    <string name="interest">Interest</string>
+    <string name="mature_loan">Mature Loan</string>
+    <string name="emi_amount">EMI Amount</string>
+    <string name="emi_calculator">EMI Calculator</string>
+</resources>
