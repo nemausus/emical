@@ -34,9 +34,9 @@ public class CalcInputActivity extends Activity {
         });
     }
 
-    private int getInput(int id) {
+    private double getInput(int id) {
         EditText editText = (EditText) findViewById(id);
         String text = editText.getText().toString();
-        return text.isEmpty() ? 0 : Integer.valueOf(text);
+        return text.isEmpty() ? 0 : Double.valueOf(text);
     }
 }

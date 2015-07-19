@@ -13,90 +13,129 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/asset_price" />
-
-        <EditText
-            android:id="@+id/asset_price"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/insurance_charge" />
+            <TextView
+                style="@style/Label"
+                android:text="@string/asset_price" />
 
-        <EditText
-            android:id="@+id/insurance_charge"
+            <EditText
+                android:id="@+id/asset_price"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/registration_charge" />
+            <TextView
+                style="@style/Label"
+                android:text="@string/insurance_charge" />
 
-        <EditText
-            android:id="@+id/registration_charge"
+            <EditText
+                android:id="@+id/insurance_charge"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/file_charge" />
+            <TextView
+                style="@style/Label"
+                android:text="@string/registration_charge" />
 
-        <EditText
-            android:id="@+id/file_charge"
+            <EditText
+                android:id="@+id/registration_charge"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/other_charges" />
+            <TextView
+                style="@style/Label"
+                android:text="@string/file_charge" />
 
-        <EditText
-            android:id="@+id/other_charges"
+            <EditText
+                android:id="@+id/file_charge"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/down_payment" />
+            <TextView
+                style="@style/Label"
+                android:text="@string/other_charges" />
 
-        <EditText
-            android:id="@+id/down_payment"
+            <EditText
+                android:id="@+id/other_charges"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/interest_rate" />
+            <TextView
+                style="@style/Label"
+                android:text="@string/down_payment" />
 
-        <EditText
-            android:id="@+id/interest_rate"
+            <EditText
+                android:id="@+id/down_payment"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/InputLabel"
-            android:text="@string/loan_tenure" />
+            <TextView
+                style="@style/Label"
+                android:text="@string/interest_rate" />
 
-        <EditText
-            android:id="@+id/loan_tenure"
+            <EditText
+                android:id="@+id/interest_rate"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/loan_tenure" />
+
+            <EditText
+                android:id="@+id/loan_tenure"
+                style="@style/TextRight"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/calculate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/calculate" />
+
     </LinearLayout>
 </ScrollView>
