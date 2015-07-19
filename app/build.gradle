@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 22
     buildToolsVersion "21.1.2"
-
     defaultConfig {
         applicationId "in.codehub.emical"
         minSdkVersion 15
@@ -11,10 +10,19 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+        config {
+            keyAlias 'EmiCalcKey'
+            keyPassword 'inn0vate'
+            storeFile file('/Users/knaresh/emicalc.jks')
+            storePassword 'inn0vate'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
