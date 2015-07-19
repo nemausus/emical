@@ -5,4 +5,9 @@
         android:summary="@string/file_charge_summary"
         android:title="@string/file_charge"
         android:defaultValue="1999.0" />
+    <EditTextPreference
+        android:key="service_charge_key"
+        android:summary="@string/service_charge_summary"
+        android:title="@string/service_charge"
+        android:defaultValue="1.0" />
 </PreferenceScreen>

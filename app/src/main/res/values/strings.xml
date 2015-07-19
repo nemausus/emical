@@ -12,7 +12,7 @@
     <string name="calculate">Calculate</string>
     <string name="result">Result</string>
     <string name="base_loan">Base Loan</string>
-    <string name="service_charge">Service Charge(1%)</string>
+    <string name="service_charge">Service Charge</string>
     <string name="given_loan">Given Loan</string>
     <string name="interest">Interest</string>
     <string name="mature_loan">Mature Loan</string>
@@ -20,5 +20,6 @@
     <string name="emi_calculator">EMI Calculator</string>
     <string name="next">Next</string>
     <string name="settings">Settings</string>
-    <string name="file_charge_summary">Default File Charge</string>
+    <string name="file_charge_summary">Default File Charge is Rs. %1$s</string>
+    <string name="service_charge_summary">Service Charge is %1$s%%</string>
 </resources>

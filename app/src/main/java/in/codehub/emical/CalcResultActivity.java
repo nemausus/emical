@@ -2,7 +2,9 @@ package in.codehub.emical;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -29,14 +31,16 @@ public class CalcResultActivity extends Activity {
                 + intent.getDoubleExtra(EXTRA_FILE_CHARGE, 0)
                 + intent.getDoubleExtra(EXTRA_OTHER_CHARGES, 0)
                 - intent.getDoubleExtra(EXTRA_DOWN_PAYMENT, 0);
-        double serviceCharge = baseLoan /100;
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        double serviceChargeRate = Double.parseDouble(sharedPref.getString("service_charge_key", "1.0"));
+        double serviceCharge = baseLoan * serviceChargeRate / 100;
         double givenLoan = baseLoan + serviceCharge;
         double loanTenure = intent.getDoubleExtra(EXTRA_LOAN_TENURE, 0);
         double interest = Math.ceil(givenLoan * intent.getDoubleExtra(EXTRA_INTEREST_RATE, 0) * loanTenure / 1200);
         double matureLoan = givenLoan + interest;
         double emiAmount = Math.round(loanTenure == 0 ? 0 : matureLoan/loanTenure);
         ((TextView) findViewById(R.id.base_loan)).setText("" + baseLoan);
-        ((TextView) findViewById(R.id.service_charge)).setText("+" + serviceCharge);
+        ((TextView) findViewById(R.id.service_charge)).setText("(" + serviceChargeRate + "%) +" + serviceCharge);
         ((TextView) findViewById(R.id.given_loan)).setText("" + givenLoan);
         ((TextView) findViewById(R.id.interest)).setText("+" + interest);
         ((TextView) findViewById(R.id.mature_loan)).setText("" + matureLoan);
