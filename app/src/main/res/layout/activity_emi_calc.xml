@@ -21,7 +21,7 @@
             android:id="@+id/asset_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             style="@style/InputLabel"
@@ -31,7 +31,7 @@
             android:id="@+id/insurance_charge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             style="@style/InputLabel"
@@ -41,7 +41,7 @@
             android:id="@+id/registration_charge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             style="@style/InputLabel"
@@ -51,7 +51,7 @@
             android:id="@+id/file_charge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             style="@style/InputLabel"
@@ -61,7 +61,7 @@
             android:id="@+id/other_charges"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             style="@style/InputLabel"
@@ -71,7 +71,7 @@
             android:id="@+id/down_payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             style="@style/InputLabel"
@@ -81,7 +81,7 @@
             android:id="@+id/interest_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <TextView
             style="@style/InputLabel"
@@ -91,7 +91,7 @@
             android:id="@+id/loan_tenure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/calculate"
