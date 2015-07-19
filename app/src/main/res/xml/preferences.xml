@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="file_charge_key"
+        android:summary="@string/file_charge_summary"
+        android:title="@string/file_charge"
+        android:defaultValue="1999.0" />
+</PreferenceScreen>

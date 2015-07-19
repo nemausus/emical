@@ -2,8 +2,11 @@ package in.codehub.emical;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +35,36 @@ public class CalcInputActivity extends Activity {
                 startActivity(intent);
             }
         });
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String fileCharge = sharedPref.getString("file_charge_key", "0.0");
+        ((EditText)findViewById(R.id.file_charge)).setText(fileCharge);
+        ((EditText)findViewById(R.id.insurance_charge)).setText("0.0");
+        ((EditText)findViewById(R.id.registration_charge)).setText("0.0");
+        ((EditText)findViewById(R.id.other_charges)).setText("0.0");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                openSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void openSettings() {
+        startActivity(new Intent(this, SettingsActivity.class));
     }
 
     private double getInput(int id) {
